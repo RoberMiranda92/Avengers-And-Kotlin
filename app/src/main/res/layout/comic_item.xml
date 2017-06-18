@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testkotlin.com.mykotlinapplication.view.ComicView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comic_item"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical">
+
+</testkotlin.com.mykotlinapplication.view.ComicView>

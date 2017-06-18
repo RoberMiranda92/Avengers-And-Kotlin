@@ -1,0 +1,21 @@
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to /Users/RobertoMiranda/Library/Android/sdk/ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+Observed package id 'platforms;android-23' in inconsistent location '/Users/RobertoMiranda/Library/Android/sdk/temp/PlatformPackage.old01' (Expected '/Users/RobertoMiranda/Library/Android/sdk/platforms/android-23')
+Already observed package id 'platforms;android-23' in '/Users/RobertoMiranda/Library/Android/sdk/platforms/android-23'. Skipping duplicate at '/Users/RobertoMiranda/Library/Android/sdk/temp/PlatformPackage.old01'
+Observed package id 'platforms;android-23' in inconsistent location '/Users/RobertoMiranda/Library/Android/sdk/temp/PlatformPackage.old01' (Expected '/Users/RobertoMiranda/Library/Android/sdk/platforms/android-23')
+Already observed package id 'platforms;android-23' in '/Users/RobertoMiranda/Library/Android/sdk/platforms/android-23'. Skipping duplicate at '/Users/RobertoMiranda/Library/Android/sdk/temp/PlatformPackage.old01'
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to /Users/RobertoMiranda/Library/Android/sdk/ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+Incremental java compilation is an incubating feature.
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to /Users/RobertoMiranda/Library/Android/sdk/ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+
+BUILD FAILED
+
+Total time: 2.034 secs
