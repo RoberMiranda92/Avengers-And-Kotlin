@@ -3,4 +3,12 @@
     <string name="title_home">Characters</string>
     <string name="title_dashboard">Comics</string>
     <string name="title_notifications">Search</string>
+    <string name="list_detail_transition">list_detail_transition</string>
+    <string name="detail_dummy">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut nec ex sapien. Phasellus non nisi augue. Morbi fringilla feugiat mauris in rhoncus. Suspendisse urna quam, lacinia id vehicula at, consequat condimentum nisi. Maecenas non erat ultricies, aliquam nibh eu, rhoncus tortor. Mauris consequat, nibh id consectetur ornare, nibh arcu euismod metus, in cursus velit neque at arcu. Nam faucibus bibendum cursus. Vivamus fermentum posuere sodales. Donec viverra lacus at mauris laoreet mollis. Cras quis eleifend ex, a ullamcorper urna. Quisque nibh est, congue sodales mauris at, fringilla semper enim. Vestibulum in risus ut eros porttitor posuere. Pellentesque viverra accumsan nisi, ac mollis est efficitur nec. Ut molestie, massa eget ultrices eleifend, elit diam finibus risus, a elementum nulla nunc vel magna. Aenean mollis urna non dolor ornare molestie. Pellentesque a congue arcu, non lobortis nibh.
+
+        Suspendisse pharetra ut nunc nec euismod. Nulla vel euismod lacus. Integer aliquam, nunc eu eleifend tincidunt, felis sapien vestibulum orci, sit amet tincidunt urna quam sit amet sapien. Aliquam tempor nibh at mollis scelerisque. Praesent sed libero ut est convallis maximus. In bibendum purus ut justo mollis pretium. Phasellus dapibus, lacus non rhoncus dapibus, massa metus varius ante, ut dapibus tellus metus id dui. Nulla tellus arcu, aliquam vitae magna id, malesuada pellentesque lectus.
+
+        Etiam scelerisque mollis purus. Aenean consectetur neque et aliquam egestas. In volutpat mi erat, quis vestibulum orci feugiat in. Phasellus volutpat hendrerit massa vitae hendrerit. Vivamus ut est sed orci cursus finibus. Ut enim velit, placerat id eleifend id, fringilla vitae lorem. Quisque tempus risus ac nisi convallis sagittis.
+    </string>
 </resources>
