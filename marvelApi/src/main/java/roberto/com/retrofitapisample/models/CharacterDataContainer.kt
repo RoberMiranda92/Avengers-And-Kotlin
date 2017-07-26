@@ -1,11 +1,12 @@
 package roberto.com.retrofitapisample.models
 
-class CharacterDataContainer {
+import java.io.Serializable
 
-    var offset: Int = 0
-    var limit: Int = 0
-    var total: Int = 0
-    var count: Int = 0
-    var results: List<Character>? = null
+data class CharacterDataContainer constructor (
+    var offset: Int = 0,
+    var limit: Int = 0,
+    var total: Int = 0,
+    var count: Int = 0,
+    var results: List<Character>? = null) : BaseModel {
 
 }

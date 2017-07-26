@@ -2,9 +2,9 @@ package roberto.com.retrofitapisample.models
 
 import java.util.HashMap
 
-class Thumbnail {
+data class Thumbnail constructor(
 
-    var path: String? = null
-    var extension: String? = null
+    var path: String? = null,
+    var extension: String? = null) : BaseModel {
 
 }
