@@ -16,7 +16,10 @@ import roberto.com.retrofitapisample.models.Character
 import testkotlin.com.mykotlinapplication.R
 import testkotlin.com.mykotlinapplication.extensions.configureLoading
 import testkotlin.com.mykotlinapplication.presenter.CharactersPresenter
+import testkotlin.com.mykotlinapplication.routing.AppNavigation
+import testkotlin.com.mykotlinapplication.view.activity.DetailActivity
 import testkotlin.com.mykotlinapplication.view.adapters.CharactersAdapter
+import testkotlin.com.mykotlinapplication.viewmodels.CharacterVM
 
 
 class CharactersFragment : Fragment(), CharactersPresenter.CharactersViewContract, CharactersAdapter.CharactersListCallBack {
@@ -43,7 +46,7 @@ class CharactersFragment : Fragment(), CharactersPresenter.CharactersViewContrac
         loadinf.configureLoading()
 
 
-        mCharactersAdapter = CharactersAdapter(context, R.layout.character_row, this)
+        mCharactersAdapter = CharactersAdapter(context, R.layout.character_row, this) {navigateTo(it)}
         mCharactersView.layoutManager = LinearLayoutManager(context)
         mCharactersView.adapter = mCharactersAdapter
 
@@ -111,5 +114,9 @@ class CharactersFragment : Fragment(), CharactersPresenter.CharactersViewContrac
     private fun showMessage(message: String) {
         Toast.makeText(context, message, android.widget.Toast.LENGTH_SHORT).show()
 
+    }
+
+    private fun navigateTo(viewmodel : CharacterVM) {
+        AppNavigation.navigateToDetailActivity(this!!.activity, viewmodel)
     }
 }
