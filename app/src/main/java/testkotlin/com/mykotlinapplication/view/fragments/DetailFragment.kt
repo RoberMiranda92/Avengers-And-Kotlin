@@ -2,6 +2,7 @@ package testkotlin.com.mykotlinapplication.view.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.CardView
 import android.transition.Slide
 import android.view.Gravity
 import android.view.LayoutInflater
@@ -27,6 +28,9 @@ class DetailFragment : Fragment() {
 
     @BindView(R.id.detailTitle)
     lateinit var title : TextView
+
+    @BindView(R.id.contentContainer)
+    lateinit var contentContainer : CardView
 
     @BindView(R.id.detailContent)
     lateinit var content : TextView
@@ -98,7 +102,7 @@ class DetailFragment : Fragment() {
     private fun animateText() {
         val slide : Slide = Slide(Gravity.BOTTOM)
 
-        slide.addTarget(this.content)
+        slide.addTarget(this.contentContainer)
 
         slide.duration =1000
 
