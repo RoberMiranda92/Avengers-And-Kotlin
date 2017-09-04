@@ -3,9 +3,9 @@ package roberto.com.retrofitapisample.models
 /**
  * Created by RobertoMiranda on 17/06/2017.
  */
-class ComicDate {
+data class ComicDate constructor(
 
-    var type: String? = null
-    var date: String? = null
+    var type: String? = null,
+    var date: String? = null) : BaseModel {
 
 }

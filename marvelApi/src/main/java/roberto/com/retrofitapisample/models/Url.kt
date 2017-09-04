@@ -1,8 +1,8 @@
 package roberto.com.retrofitapisample.models
 
-class Url {
+data class Url constructor(
 
-    var type: String? = null
-    var url: String? = null
+    var type: String? = null,
+    var url: String? = null) : BaseModel {
 
 }

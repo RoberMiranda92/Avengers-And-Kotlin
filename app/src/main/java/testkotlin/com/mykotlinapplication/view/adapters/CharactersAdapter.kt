@@ -10,20 +10,20 @@ import butterknife.ButterKnife
 import roberto.com.retrofitapisample.models.Character
 import testkotlin.com.mykotlinapplication.R
 import testkotlin.com.mykotlinapplication.view.CharacterView
+import testkotlin.com.mykotlinapplication.viewmodels.CharacterVM
 
 /**
  * Created by RobertoMiranda on 11/06/2017.
  */
-
-class CharactersAdapter(context: Context, layoutID: Int, callback: CharactersListCallBack?) : RecyclerView.Adapter<CharactersAdapter.CharacterViewHolder>() {
+class CharactersAdapter(val context: Context, val layoutID: Int, val callback: CharactersListCallBack?, val listener: (CharacterVM) -> Unit) : RecyclerView.Adapter<CharactersAdapter.CharacterViewHolder>() {
 
     private var data: ArrayList<Character>? = null
-    private var mContext = context
     private var mRowViewId = layoutID
-    private var mCallback: CharactersListCallBack? = callback;
+
 
     init {
         data = ArrayList()
+        mRowViewId = layoutID
     }
 
 
@@ -44,11 +44,11 @@ class CharactersAdapter(context: Context, layoutID: Int, callback: CharactersLis
 
         val character: Character = data!!.get(position)
 
-        (holder!! as CharacterViewHolder).mCharacterView.setCharacter(character)
+        (holder!! as CharacterViewHolder).bind(character)
 
         if (position == data!!.size - 5) {
 
-            mCallback?.onScrollIsEnding()
+            callback?.onScrollIsEnding()
         }
 
 
@@ -57,22 +57,10 @@ class CharactersAdapter(context: Context, layoutID: Int, callback: CharactersLis
     override fun onCreateViewHolder(parent: ViewGroup?, viewType: Int): CharacterViewHolder {
 
 
-        var view: View = LayoutInflater.from(mContext).inflate(mRowViewId, parent, false)
+        var view: View = LayoutInflater.from(context).inflate(mRowViewId, parent, false)
 
 
-        return CharacterViewHolder(view)
-    }
-
-
-    class CharacterViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView) {
-
-        @BindView(R.id.characters_item)
-        lateinit var mCharacterView: CharacterView
-
-        init {
-            ButterKnife.bind(this, itemView!!)
-        }
-
+        return CharacterViewHolder(view, listener)
     }
 
     interface CharactersListCallBack {
@@ -83,5 +71,25 @@ class CharactersAdapter(context: Context, layoutID: Int, callback: CharactersLis
     fun addData(data: ArrayList<Character>) {
         this.data?.addAll(data)
         notifyDataSetChanged()
+    }
+
+    /**
+     *
+     */
+    class CharacterViewHolder constructor(itemView: View?, val listener : (CharacterVM) -> Unit) : RecyclerView.ViewHolder(itemView) {
+
+        @BindView(R.id.characters_item)
+        lateinit var mCharacterView: CharacterView
+
+        init {
+            ButterKnife.bind(this, itemView!!)
+        }
+
+        fun bind(data : Character) {
+            (this.itemView as CharacterView).setCharacter(data)
+
+            this.itemView.setOnClickListener { listener(CharacterVM(itemView, data)) }
+        }
+
     }
 }

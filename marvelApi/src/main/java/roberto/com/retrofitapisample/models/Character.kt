@@ -1,19 +1,20 @@
 package roberto.com.retrofitapisample.models
 
-import java.util.HashMap
+import java.io.Serializable
 
-class Character {
 
-    var id: String? = null
-    var name: String? = null
-    var description: String? = null
-    var modified: String? = null
-    var resourceURI: String? = null
-    var urls: List<Url>? = null
-    var thumbnail: Thumbnail? = null
-    var comics: ComicList? = null
-    var stories: StoryList? = null
-    var events: EventList? = null
-    var series: SeriesList? = null
+data class Character constructor(
 
-}
+
+    var id: String?,
+    var name: String?,
+    var description: String?,
+    var modified: String?,
+    var resourceURI: String?,
+    var urls: List<Url>?,
+    var thumbnail: Thumbnail?,
+    var comics: ComicList?,
+    var stories: StoryList?,
+    var events: EventList?,
+    var series: SeriesList?) : BaseModel {}
+

@@ -1,11 +1,12 @@
 package roberto.com.retrofitapisample.models
 
+
 /**
  * Created by RobertoMiranda on 17/06/2017.
  */
-class CreatorSummary {
+data class CreatorSummary constructor (
 
-    var resourceURI: String? = null
-    var name: String? = null
-    var rolerent: String? = null
+    var resourceURI: String? = null,
+    var name: String? = null,
+    var rolerent: String? = null) : BaseModel {
 }
